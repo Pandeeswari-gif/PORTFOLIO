@@ -1,0 +1,1838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pandeeswari N | Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --purple: #7c3aed;
+            --dark: #111827;
+            --text: #374151;
+            --gray: #6b7280;
+            --light: #f8fafc;
+            --white: #ffffff;
+            --border: #e5e7eb;
+            --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            color: var(--text);
+            background: white;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        section {
+            padding: 90px 0;
+        }
+
+        /* NAVBAR */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255,255,255,0.96);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav {
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: "Poppins", sans-serif;
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--dark);
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #4b5563;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* HERO */
+
+        #home {
+            min-height: 100vh;
+            padding-top: 150px;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(
+                135deg,
+                #f8fbff,
+                #ffffff,
+                #f5f3ff
+            );
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .hero-small {
+            color: var(--primary);
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-family: "Poppins", sans-serif;
+            font-size: clamp(42px, 6vw, 68px);
+            line-height: 1.1;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero h2 {
+            font-size: 23px;
+            color: #4b5563;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            color: var(--gray);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 700;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: white;
+            color: var(--dark);
+            border: 1px solid var(--border);
+        }
+
+        .btn-outline:hover {
+            color: var(--primary);
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* SOCIAL */
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .social-icons a {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            color: #4b5563;
+            background: white;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* PROFILE */
+
+        .profile-area {
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile-card {
+            width: 310px;
+            padding: 35px 25px;
+            text-align: center;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .profile-circle {
+            width: 150px;
+            height: 150px;
+            margin: auto;
+            border-radius: 50%;
+            background: linear-gradient(
+                135deg,
+                var(--primary),
+                var(--purple)
+            );
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 60px;
+        }
+
+        .profile-card h3 {
+            font-family: "Poppins", sans-serif;
+            color: var(--dark);
+            font-size: 22px;
+            margin-top: 20px;
+        }
+
+        .profile-card p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        .profile-card .social-icons {
+            justify-content: center;
+        }
+
+        /* SECTION TITLE */
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title small {
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+            font-family: "Poppins", sans-serif;
+            color: var(--dark);
+            font-size: 38px;
+            margin-top: 8px;
+        }
+
+        .section-title p {
+            max-width: 600px;
+            margin: 10px auto;
+            color: var(--gray);
+        }
+
+        /* ABOUT */
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .about-card {
+            padding: 35px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .about-card h3 {
+            font-family: "Poppins", sans-serif;
+            color: var(--dark);
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .about-card p {
+            color: var(--gray);
+            margin-bottom: 15px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .stat {
+            padding: 18px 10px;
+            text-align: center;
+            background: var(--light);
+            border-radius: 10px;
+        }
+
+        .stat h3 {
+            color: var(--primary);
+            font-size: 22px;
+        }
+
+        .stat p {
+            font-size: 12px;
+            margin: 0;
+        }
+
+        /* SKILLS */
+
+        #skills,
+        #achievements {
+            background: var(--light);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+        }
+
+        .skill-card {
+            padding: 30px 20px;
+            text-align: center;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+            border-color: #bfdbfe;
+        }
+
+        .skill-card i {
+            font-size: 35px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .skill-card h3 {
+            color: var(--dark);
+            font-size: 17px;
+        }
+
+        .skill-card p {
+            color: var(--gray);
+            font-size: 13px;
+        }
+
+        /* PROJECTS */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow);
+        }
+
+        .project-top {
+            height: 170px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 55px;
+        }
+
+        .project-one {
+            background: linear-gradient(135deg,#4f46e5,#7c3aed);
+        }
+
+        .project-two {
+            background: linear-gradient(135deg,#0369a1,#0ea5e9);
+        }
+
+        .project-three {
+            background: linear-gradient(135deg,#be123c,#ec4899);
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-content h3 {
+            font-family: "Poppins",sans-serif;
+            color: var(--dark);
+            font-size: 20px;
+        }
+
+        .project-category {
+            color: var(--primary);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin: 5px 0 12px;
+        }
+
+        .project-content p {
+            color: var(--gray);
+            font-size: 13px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin: 18px 0;
+        }
+
+        .tags span {
+            padding: 5px 9px;
+            background: #eff6ff;
+            color: var(--primary);
+            border-radius: 5px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .project-link {
+            color: var(--primary);
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        /* ACHIEVEMENTS */
+
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 20px;
+        }
+
+        .achievement-card {
+            display: flex;
+            gap: 18px;
+            padding: 25px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            transition: 0.3s;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+
+        .achievement-icon {
+            min-width: 52px;
+            height: 52px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #eff6ff;
+            color: var(--primary);
+            border-radius: 10px;
+        }
+
+        .achievement-card h3 {
+            color: var(--dark);
+            font-size: 17px;
+            margin-bottom: 5px;
+        }
+
+        .achievement-card p {
+            color: var(--gray);
+            font-size: 13px;
+        }
+
+        .achievement-card a {
+            color: var(--primary);
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 40px;
+        }
+
+        .contact-info h3 {
+            font-family: "Poppins",sans-serif;
+            color: var(--dark);
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .contact-info > p {
+            color: var(--gray);
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-icon {
+            min-width: 45px;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #eff6ff;
+            color: var(--primary);
+            border-radius: 10px;
+        }
+
+        .contact-item strong {
+            color: var(--dark);
+            font-size: 14px;
+        }
+
+        .contact-item p,
+        .contact-item a {
+            color: var(--gray);
+            font-size: 13px;
+        }
+
+        .contact-item a:hover {
+            color: var(--primary);
+        }
+
+        .contact-form {
+            padding: 30px;
+            background: var(--light);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--dark);
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 7px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: white;
+            color: var(--dark);
+            outline: none;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary);
+        }
+
+        .form-group textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .message {
+            color: #16a34a;
+            font-size: 13px;
+            margin-top: 12px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        footer h2 {
+            font-family: "Poppins",sans-serif;
+        }
+
+        footer h2 span {
+            color: #60a5fa;
+        }
+
+        footer p {
+            color: #9ca3af;
+            font-size: 13px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 18px 0;
+        }
+
+        .footer-links a {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #374151;
+            border-radius: 50%;
+            color: #d1d5db;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        /* SCROLL TOP */
+
+        #scrollTop {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 42px;
+            height: 42px;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            border-radius: 8px;
+            background: var(--primary);
+            color: white;
+            cursor: pointer;
+            z-index: 999;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:950px) {
+
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero p {
+                margin: auto;
+            }
+
+            .hero-buttons,
+            .hero .social-icons {
+                justify-content: center;
+            }
+
+            .about,
+            .contact {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .projects-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+
+        @media(max-width:700px) {
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 72px;
+                left: 0;
+                width: 100%;
+                display: none;
+                flex-direction: column;
+                padding: 25px 0;
+                background: white;
+                border-top: 1px solid var(--border);
+                gap: 20px;
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .projects-grid,
+            .achievement-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 32px;
+            }
+        }
+
+        @media(max-width:500px) {
+
+            section {
+                padding: 70px 0;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-card {
+                width: 280px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .hero h1 {
+                font-size: 43px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header>
+
+    <div class="container">
+
+        <nav>
+
+            <a href="#home" class="logo">
+                Pandeeswari<span>.</span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+
+                <li><a href="#home">Home</a></li>
+
+                <li><a href="#about">About</a></li>
+
+                <li><a href="#skills">Skills</a></li>
+
+                <li><a href="#projects">Projects</a></li>
+
+                <li><a href="#achievements">Achievements</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+            <div class="menu-btn" id="menuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section id="home">
+
+    <div class="container">
+
+        <div class="hero">
+
+            <div>
+
+                <div class="hero-small">
+                    WELCOME TO MY PORTFOLIO
+                </div>
+
+                <h1>
+                    Hi, I'm
+                    <span>Pandeeswari N</span>
+                </h1>
+
+                <h2>
+                    B.Tech Information Technology Student
+                </h2>
+
+                <p>
+                    I am passionate about Web Development,
+                    Artificial Intelligence, Machine Learning
+                    and problem solving. I enjoy building
+                    practical and useful technology projects.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-code"></i>
+                        View Projects
+                    </a>
+
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-envelope"></i>
+                        Contact Me
+                    </a>
+
+                </div>
+
+
+                <!-- SOCIAL LINKS -->
+
+                <div class="social-icons">
+
+                    <!-- Replace with your actual LinkedIn URL -->
+                    <a href="https://www.linkedin.com/feed/"
+                       target="_blank"
+                       title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+
+                    <!-- GitHub -->
+                    <a href="https://github.com/Pandeeswari-gif"
+                       target="_blank"
+                       title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                    <!-- LeetCode -->
+                    <a href="https://leetcode.com/u/13cJAdHEn8/"
+                       target="_blank"
+                       title="LeetCode">
+                        <i class="fas fa-code"></i>
+                    </a>
+
+                    <!-- Replace with actual Gmail -->
+                    <a href="mailto:YOUR_EMAIL@gmail.com"
+                       title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROFILE CARD -->
+
+            <div class="profile-area">
+
+                <div class="profile-card">
+
+                    <div class="profile-circle">
+                        <i class="fas fa-user"></i>
+                    </div>
+
+                    <h3>Pandeeswari N</h3>
+
+                    <p>
+                        Developer • Learner • Creator
+                    </p>
+
+                    <div class="social-icons">
+
+                        <a href="https://www.linkedin.com/feed/"
+                           target="_blank"
+                           title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+
+                        <a href="https://github.com/Pandeeswari-gif"
+                           target="_blank"
+                           title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+
+                        <a href="https://leetcode.com/u/13cJAdHEn8/"
+                           target="_blank"
+                           title="LeetCode">
+                            <i class="fas fa-code"></i>
+                        </a>
+
+                        <a href="mailto:YOUR_EMAIL@gmail.com"
+                           title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <small>ABOUT ME</small>
+
+            <h2>Know More About Me</h2>
+
+            <p>
+                A little information about my education,
+                interests and career goals.
+            </p>
+
+        </div>
+
+
+        <div class="about">
+
+            <div class="about-card">
+
+                <h3>Who I Am</h3>
+
+                <p>
+                    I am a III Year B.Tech Information
+                    Technology student at Kamaraj College
+                    of Engineering and Technology.
+                </p>
+
+                <p>
+                    I have a strong interest in Web Development,
+                    Artificial Intelligence, Machine Learning
+                    and programming.
+                </p>
+
+                <p>
+                    I enjoy participating in technical events,
+                    competitions and developing real-world
+                    projects.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <h3>My Career Goal</h3>
+
+                <p>
+                    My goal is to become a skilled software
+                    developer and create useful technology
+                    solutions.
+                </p>
+
+                <p>
+                    I continuously improve my technical,
+                    communication and problem-solving skills.
+                </p>
+
+                <div class="stats">
+
+                    <div class="stat">
+                        <h3>3+</h3>
+                        <p>Projects</p>
+                    </div>
+
+                    <div class="stat">
+                        <h3>5+</h3>
+                        <p>Achievements</p>
+                    </div>
+
+                    <div class="stat">
+                        <h3>IT</h3>
+                        <p>Student</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <small>MY SKILLS</small>
+
+            <h2>Technical Skills</h2>
+
+            <p>
+                Technologies and tools I use for learning
+                and project development.
+            </p>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <i class="fab fa-java"></i>
+                <h3>Java</h3>
+                <p>Programming & Problem Solving</p>
+            </div>
+
+            <div class="skill-card">
+                <i class="fab fa-html5"></i>
+                <h3>HTML & CSS</h3>
+                <p>Web Development</p>
+            </div>
+
+            <div class="skill-card">
+                <i class="fab fa-js"></i>
+                <h3>JavaScript</h3>
+                <p>Interactive Websites</p>
+            </div>
+
+            <div class="skill-card">
+                <i class="fab fa-react"></i>
+                <h3>React</h3>
+                <p>Frontend Development</p>
+            </div>
+
+            <div class="skill-card">
+                <i class="fab fa-python"></i>
+                <h3>Python</h3>
+                <p>AI & Data Processing</p>
+            </div>
+
+            <div class="skill-card">
+                <i class="fas fa-brain"></i>
+                <h3>AI & ML</h3>
+                <p>Machine Learning & NLP</p>
+            </div>
+
+            <div class="skill-card">
+                <i class="fas fa-database"></i>
+                <h3>MongoDB</h3>
+                <p>Database Management</p>
+            </div>
+
+            <div class="skill-card">
+                <i class="fas fa-code"></i>
+                <h3>Data Structures</h3>
+                <p>Algorithms & Logic</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <small>MY WORK</small>
+
+            <h2>Featured Projects</h2>
+
+            <p>
+                Some projects developed during my
+                learning and technical journey.
+            </p>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+
+            <!-- PROJECT 1 -->
+
+            <div class="project-card">
+
+                <div class="project-top project-one">
+                    <i class="fas fa-brain"></i>
+                </div>
+
+                <div class="project-content">
+
+                    <h3>NeuroSentrix</h3>
+
+                    <div class="project-category">
+                        AI & MACHINE LEARNING
+                    </div>
+
+                    <p>
+                        A hybrid temporal intelligence system
+                        for early academic burnout forecasting
+                        using academic and behavioral data.
+                    </p>
+
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>ML</span>
+                        <span>NLP</span>
+                        <span>React</span>
+                    </div>
+
+                    <a href="https://github.com/Pandeeswari-gif/Nerosentrix---Eduplus"
+                       target="_blank"
+                       class="project-link">
+                        View Project →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 2 -->
+
+            <div class="project-card">
+
+                <div class="project-top project-two">
+                    <i class="fas fa-solar-panel"></i>
+                </div>
+
+                <div class="project-content">
+
+                    <h3>Renewable Energy Optimization</h3>
+
+                    <div class="project-category">
+                        AI-BASED PROJECT
+                    </div>
+
+                    <p>
+                        An intelligent approach for renewable
+                        energy prediction and optimization
+                        using AI-based techniques.
+                    </p>
+
+                    <div class="tags">
+                        <span>AI</span>
+                        <span>ANN</span>
+                        <span>Fuzzy Logic</span>
+                        <span>PSO</span>
+                    </div>
+
+                    <a href="#contact"
+                       class="project-link">
+                        Know More →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 3 - CRACKERS WEBSITE -->
+
+            <div class="project-card">
+
+                <div class="project-top project-three">
+                    <i class="fas fa-store"></i>
+                </div>
+
+                <div class="project-content">
+
+                    <h3>Crackers Website</h3>
+
+                    <div class="project-category">
+                        WEB DEVELOPMENT
+                    </div>
+
+                    <p>
+                        A responsive crackers website created
+                        to display crackers products with a
+                        clean and attractive user interface.
+                    </p>
+
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Responsive</span>
+                    </div>
+
+                    <!-- Add your actual crackers project URL here -->
+                    <a href="#"
+                       class="project-link">
+                        View Project →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ACHIEVEMENTS -->
+
+<section id="achievements">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <small>ACHIEVEMENTS</small>
+
+            <h2>My Achievements</h2>
+
+            <p>
+                Achievements from competitions, sports
+                and technical activities.
+            </p>
+
+        </div>
+
+
+        <div class="achievement-grid">
+
+
+            <div class="achievement-card">
+
+                <div class="achievement-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+
+                <div>
+
+                    <h3>Sports Day Achievement</h3>
+
+                    <p>
+                        Won prizes in sports events conducted
+                        during Sports Day at Kamaraj College
+                        of Engineering and Technology.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="achievement-card">
+
+                <div class="achievement-icon">
+                    <i class="fas fa-running"></i>
+                </div>
+
+                <div>
+
+                    <h3>K.V.S Virudhunagar Marathon</h3>
+
+                    <p>
+                        Secured 9th place in the K.V.S
+                        Virudhunagar Marathon.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="achievement-card">
+
+                <div class="achievement-icon">
+                    <i class="fas fa-microphone"></i>
+                </div>
+
+                <div>
+
+                    <h3>Speech Competition</h3>
+
+                    <p>
+                        Won First Prize in the Speech
+                        Competition conducted during
+                        Tech-O-Fest.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="achievement-card">
+
+                <div class="achievement-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+
+                <div>
+
+                    <h3>Elocution Competition</h3>
+
+                    <p>
+                        Won First Prize in the Elocution
+                        Competition.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="achievement-card">
+
+                <div class="achievement-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+
+                <div>
+
+                    <h3>LeetCode</h3>
+
+                    <p>
+                        Practicing coding problems and
+                        improving problem-solving skills.
+                    </p>
+
+                    <a href="https://leetcode.com/u/13cJAdHEn8/"
+                       target="_blank">
+                        View LeetCode Profile →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="achievement-card">
+
+                <div class="achievement-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+
+                <div>
+
+                    <h3>Technical Activities</h3>
+
+                    <p>
+                        Actively participating in technical
+                        events, project development and
+                        coding activities.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <small>CONTACT ME</small>
+
+            <h2>Let's Connect</h2>
+
+            <p>
+                Feel free to connect with me for projects,
+                collaborations and opportunities.
+            </p>
+
+        </div>
+
+
+        <div class="contact">
+
+
+            <!-- CONTACT INFORMATION -->
+
+            <div class="contact-info">
+
+                <h3>Get In Touch</h3>
+
+                <p>
+                    You can connect with me through
+                    LinkedIn, GitHub, LeetCode or Email.
+                </p>
+
+
+                <!-- LINKEDIN -->
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>LinkedIn</strong>
+
+                        <p>
+                            <a href="https://www.linkedin.com/feed/"
+                               target="_blank">
+                                View LinkedIn Profile
+                            </a>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- GITHUB -->
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>GitHub</strong>
+
+                        <p>
+                            <a href="https://github.com/Pandeeswari-gif"
+                               target="_blank">
+                                github.com/Pandeeswari-gif
+                            </a>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LEETCODE -->
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>LeetCode</strong>
+
+                        <p>
+                            <a href="https://leetcode.com/u/13cJAdHEn8/"
+                               target="_blank">
+                                View LeetCode Profile
+                            </a>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>Email</strong>
+
+                        <p>
+                            <a href="mailto:YOUR_EMAIL@gmail.com">
+                                YOUR_EMAIL@gmail.com
+                            </a>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SOCIAL ICONS -->
+
+                <div class="social-icons">
+
+                    <a href="https://www.linkedin.com/feed/"
+                       target="_blank"
+                       title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="https://github.com/Pandeeswari-gif"
+                       target="_blank"
+                       title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                    <a href="https://leetcode.com/u/13cJAdHEn8/"
+                       target="_blank"
+                       title="LeetCode">
+                        <i class="fas fa-code"></i>
+                    </a>
+
+                    <a href="mailto:YOUR_EMAIL@gmail.com"
+                       title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTACT FORM -->
+
+            <form class="contact-form" id="contactForm">
+
+                <div class="form-group">
+
+                    <label>Your Name</label>
+
+                    <input type="text"
+                           id="name"
+                           placeholder="Enter your name"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Your Email</label>
+
+                    <input type="email"
+                           id="email"
+                           placeholder="Enter your email"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Subject</label>
+
+                    <input type="text"
+                           id="subject"
+                           placeholder="Enter subject"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Message</label>
+
+                    <textarea id="message"
+                              placeholder="Write your message..."
+                              required></textarea>
+
+                </div>
+
+
+                <button type="submit"
+                        class="btn btn-primary">
+
+                    <i class="fas fa-paper-plane"></i>
+
+                    Send Message
+
+                </button>
+
+                <p class="message"
+                   id="formMessage"></p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h2>
+        Pandeeswari<span>.</span>
+    </h2>
+
+    <p>
+        B.Tech Information Technology Student
+    </p>
+
+
+    <div class="footer-links">
+
+        <a href="https://www.linkedin.com/feed/"
+           target="_blank"
+           title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+
+        <a href="https://github.com/Pandeeswari-gif"
+           target="_blank"
+           title="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
+
+        <a href="https://leetcode.com/u/13cJAdHEn8/"
+           target="_blank"
+           title="LeetCode">
+            <i class="fas fa-code"></i>
+        </a>
+
+        <a href="mailto:YOUR_EMAIL@gmail.com"
+           title="Email">
+            <i class="fas fa-envelope"></i>
+        </a>
+
+    </div>
+
+    <p>
+        © 2026 Pandeeswari N. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- SCROLL TO TOP -->
+
+<button id="scrollTop">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+
+<script>
+
+    /* MOBILE MENU */
+
+    const menuBtn =
+        document.getElementById("menuBtn");
+
+    const navLinks =
+        document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", function () {
+
+        navLinks.classList.toggle("active");
+
+    });
+
+
+    document
+        .querySelectorAll(".nav-links a")
+        .forEach(function(link) {
+
+            link.addEventListener("click", function() {
+
+                navLinks.classList.remove("active");
+
+            });
+
+        });
+
+
+    /* CONTACT FORM */
+
+    const contactForm =
+        document.getElementById("contactForm");
+
+    const formMessage =
+        document.getElementById("formMessage");
+
+    contactForm.addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+            formMessage.textContent =
+                "✓ Thank you! Your message has been submitted successfully.";
+
+            contactForm.reset();
+
+        }
+    );
+
+
+    /* SCROLL TOP */
+
+    const scrollTop =
+        document.getElementById("scrollTop");
+
+    window.addEventListener(
+        "scroll",
+        function() {
+
+            if(window.scrollY > 400) {
+
+                scrollTop.style.display = "flex";
+
+            } else {
+
+                scrollTop.style.display = "none";
+
+            }
+
+        }
+    );
+
+
+    scrollTop.addEventListener(
+        "click",
+        function() {
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+    );
+
+
+</script>
+
+</body>
+</html>
