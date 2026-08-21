@@ -53,7 +53,7 @@ A responsive website designed to display crackers products with a clean and attr
 
 - **GitHub:** https://github.com/Pandeeswari-gif
 - **LeetCode:** https://leetcode.com/u/13cJAdHEn8/
-- **LinkedIn:** Add your LinkedIn profile link
+- **LinkedIn:** https://www.linkedin.com/in/pandeeswari-n-530405331/
 
 ## 📂 Project Structure
 
